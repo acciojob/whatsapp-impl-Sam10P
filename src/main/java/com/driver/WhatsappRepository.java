@@ -59,7 +59,7 @@ public class WhatsappRepository {
     public int createMessage(String content){
         Message message = new Message(messageId, content);
         messageId++;
-        return messageId;
+        return message.getId();
     }
 
     public int sendMessage(Message message, User sender, Group group) throws Exception{
